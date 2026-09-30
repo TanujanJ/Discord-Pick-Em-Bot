@@ -52,13 +52,13 @@ class GamesListView(discord.ui.View):
 
     # Creating Previous button        
     @discord.ui.button(label="Previous", style=discord.ButtonStyle.secondary)
-    async def previous_button(self, interaction: discord.Interaction):
+    async def previous_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         self.offset = max(0, self.offset - 10) # Subtract 10 from offset when Previous button is clicked, but ensure offset does not go below 0
         await self.update_games(interaction)
 
     # Creating Next button
     @discord.ui.button(label="Next", style=discord.ButtonStyle.secondary)
-    async def next_button(self, interaction: discord.Interaction):
+    async def next_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         self.offset += 10 # Add 10 to offset when Next button is clicked
         await self.update_games(interaction)
 
