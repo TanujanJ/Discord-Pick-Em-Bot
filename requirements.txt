@@ -1,0 +1,9 @@
+aiohttp
+alembic
+asyncpg
+discord.py
+fastapi
+pydantic
+pydantic-settings
+SQLAlchemy
+uvicorn
